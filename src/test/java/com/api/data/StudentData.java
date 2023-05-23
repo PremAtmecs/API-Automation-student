@@ -21,7 +21,6 @@ public class StudentData {
     }
 
     public static Students updateStudentData(){
-        studentsPayload.setId(faker.idNumber().hashCode());
         studentsPayload.setName(faker.name().fullName());
         studentsPayload.setEmail(faker.internet().emailAddress());
         studentsPayload.setYear(faker.date().hashCode());

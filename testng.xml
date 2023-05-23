@@ -2,6 +2,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Student-API-Automation">
     <suite-files>
-        <suite-file path="src/test/resources/SuiteFiles/StudentAPI.xml" />
+        <suite-file path="src/test/resources/SuiteFiles/API.xml" />
     </suite-files>
 </suite>

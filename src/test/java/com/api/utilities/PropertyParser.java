@@ -5,10 +5,10 @@ import java.util.ResourceBundle;
 public class PropertyParser {
 
     public PropertyParser(String FilePath){
-        getURL(FilePath);
+        getFile(FilePath);
     }
 
-    public ResourceBundle getURL(String FilePath){
+    public ResourceBundle getFile(String FilePath){
         ResourceBundle routes = ResourceBundle.getBundle(FilePath);
         return routes;
     }

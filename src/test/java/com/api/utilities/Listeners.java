@@ -22,17 +22,17 @@ public class Listeners implements ITestListener{
 
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("Method failed"+ result.getName());
+        System.out.println("Method failed "+ result.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        System.out.println("Method skipped"+ result.getName());
+        System.out.println("Method skipped "+ result.getName());
     }
 
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.println("Method started"+ result.getName());
+        System.out.println("Method started "+ result.getName());
     }
 
     @Override

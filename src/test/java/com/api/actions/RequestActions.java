@@ -1,16 +1,12 @@
 package com.api.actions;
 
-import com.api.payloads.Students;
-import com.api.utilities.PropertyParser;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-
-import java.util.ResourceBundle;
 
 import static io.restassured.RestAssured.given;
 public class RequestActions {
 
-    public static Response createStudent(Object payload, String postURL){
+    public static Response create(Object payload, String postURL){
         Response response = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
@@ -20,7 +16,19 @@ public class RequestActions {
         return response;
     }
 
-    public static Response readStudent(int ID, String getURL){
+    public static Response createwithMultipleParam(Object payload, String endpoint1, String endpoint2, String postURL){
+        Response response = given()
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .pathParam("endpoint1", endpoint1)
+                .pathParam("endpoint2", endpoint2)
+                .body(payload)
+                .when()
+                .post(postURL);
+        return response;
+    }
+
+    public static Response read(int ID, String getURL){
         Response response = given()
                 .pathParam("studentid", ID)
                 .when()
@@ -28,7 +36,7 @@ public class RequestActions {
         return response;
     }
 
-    public static Response updateStudent(int studentId, Object payload, String updateURL){
+    public static Response update(int studentId, Object payload, String updateURL){
         Response response = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
@@ -39,7 +47,7 @@ public class RequestActions {
         return response;
     }
 
-    public static Response deleteStudent(int studentId, String deleteURL){
+    public static Response delete(int studentId, String deleteURL){
         Response response = given()
                 .pathParam("studentid", studentId)
                 .when()
@@ -47,7 +55,7 @@ public class RequestActions {
         return response;
     }
 
-    public static Response readSpecificStudent(String resources, String studentName, String singleStudentURL){
+    public static Response queryParam(String resources, String studentName, String singleStudentURL){
         Response response = given()
                 .pathParam("studentname", resources)
                 .queryParam("name", studentName)
@@ -55,4 +63,5 @@ public class RequestActions {
                 .get(singleStudentURL);
         return response;
     }
+
 }
