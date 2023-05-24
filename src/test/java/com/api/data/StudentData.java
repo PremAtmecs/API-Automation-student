@@ -1,6 +1,6 @@
 package com.api.data;
 
-import com.api.payloads.Students;
+import com.api.pojoclass.Students;
 import com.github.javafaker.Faker;
 
 public class StudentData {

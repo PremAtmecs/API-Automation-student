@@ -1,6 +1,6 @@
 package com.api.data;
 
-import com.api.payloads.TestFire;
+import com.api.pojoclass.TestFire;
 
 public class TestFireData {
     public static TestFire testFire = new TestFire();

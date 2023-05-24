@@ -1,4 +1,4 @@
-package com.api.payloads;
+package com.api.pojoclass;
 
 public class Students {
     private int id;

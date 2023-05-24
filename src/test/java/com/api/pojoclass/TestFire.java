@@ -1,6 +1,9 @@
-package com.api.payloads;
+package com.api.pojoclass;
 
 public class TestFire {
+
+    private String username;
+    private String password;
     public String getUsername() {
         return username;
     }
@@ -16,7 +19,4 @@ public class TestFire {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    private String username;
-    private String password;
 }
